@@ -1,0 +1,31 @@
+# created-by: streamlit-in-workspaces; skill-version=1.0.0
+definition_version: 2
+entities:
+  streamlit_app:
+    type: streamlit
+    query_warehouse: DEMO_BUILD_WH
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    main_file: streamlit_app.py
+    artifacts:
+      - pyproject.toml
+      - streamlit_app.py
+      - .streamlit/config.toml
+      - app_pages/overview.py
+      - app_pages/classification.py
+      - app_pages/masking.py
+      - app_pages/lineage.py
+      - app_pages/trust_center.py
+      - app_pages/data_quality.py
+      - app_pages/ai_context.py
+      - app_pages/semantic_agent.py
+      - app_pages/rbac_enforcement.py
+      - app_pages/coco_prompts.py
+    identifier:
+      database: CUST_DEMO_DB
+      schema: CLUTCH_HORIZON
+      name: CLUTCH_HORIZON_DEMO
+    title: clutch-horizon-demo
+    run_mode: SpcsOnly
+    execute_as: OWNER
+    artifact_repositories:
+      - SNOWFLAKE.SNOWPARK.PYPI_SHARED_REPOSITORY
